@@ -11,7 +11,7 @@ from login.forms import RegistrationForm
 # @login_required
 def is_authenticated(request):
     if request.user.is_authenticated:
-        return render(request, 'html/settings.html')
+        return redirect('/settings')
     else:
         if User.objects.all().count() <= 1:
             return redirect('/registration')

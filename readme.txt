@@ -2,8 +2,8 @@
 первый зарегистрировавшийся пользователь автоматически получает admin permission;                                           +
 после чего попадает на страницу настройки ресторана. Условно /settings.                                                     +
 
-СТРАНИЦА SETTINGS:
-Страница должна делиться на вкладки, условно это будет: settings/profile; settings/admin; settings/settings;
+СТРАНИЦА SETTINGS:                                                                                                          +
+Страница должна делиться на вкладки, условно это будет: settings/profile; settings/admin; settings/settings;                +
 settings/restaurant.                                                                                                        +
 
 SETTINGS/PROFILE:
