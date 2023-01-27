@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'registration/layout_login.html' %}
+{% block title %}Log in{% endblock %}
+{% block content %}
+<main>
 {% if form.errors %}
 <p>Ваши имя и пароль не верны. Пожалуйста, попробуйте снова</p>
 {% endif %}
@@ -33,9 +30,9 @@
     </tr>
   </table>
 
-  <input type="submit" value="login">
+  <input type="submit" value="login" class="login">
   <input type="hidden" name="next" value="{{ next }}">
 </form>
 <p><a href="{% url 'password_reset' %}">Забыли пароль?</a></p>
-</body>
-</html>
+</main>
+{% endblock %}

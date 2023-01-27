@@ -1,0 +1,14 @@
+{% extends 'registration/layout_login.html' %}
+{% block title %}Registration{% endblock %}
+{% block content %}
+<main>
+<div class="registration">
+    <h1>Registration</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="register">
+    </form>
+</div>
+</main>
+{% endblock %}
