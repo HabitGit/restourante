@@ -3,9 +3,8 @@ from django.db import models
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, default=None)
-    last_name = models.CharField(max_length=30)
-    first_name = models.CharField(max_length=30)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.CharField(max_length=500)
     birthday = models.DateField()
 
     def __str__(self):
