@@ -1,17 +1,12 @@
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import Group, User
 from django.shortcuts import render, redirect
 
 from login.forms import RegistrationForm
 
 
-# UserCreationForm
-
-
-# @login_required
 def is_authenticated(request):
     if request.user.is_authenticated:
-        return redirect('/settings')
+        return redirect('/settings/profile')
     else:
         if User.objects.all().count() <= 1:
             return redirect('/registration')
