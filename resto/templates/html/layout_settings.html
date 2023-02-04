@@ -13,11 +13,9 @@
     <span class="logo">Restaurant</span>
     {% if user.is_authenticated %}
     <li>Hello: {{ user.get_username }}</li>
-    <li>email: {{ user.email }}</li>
-    <li>last name {{ user.first_name }}</li>
     <h3>Settings</h3>
     <ul>
-        <a href=""><li>Profile</li></a>
+        <a href="{% url 'profile' %}"><li>Profile</li></a>
         <a href=""><li>Admin</li></a>
         <a href=""><li>Settings</li></a>
         <a href=""><li>Restaurant</li></a>
