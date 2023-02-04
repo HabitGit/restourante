@@ -1,23 +1,19 @@
 from django.contrib.auth.models import User
-from django.forms import ModelForm, TextInput, EmailInput
+from django.forms import ModelForm, DateInput
+
+from settings.models import Profile
 
 
-class ProfileSettingsForm(ModelForm):
+class ProfileForm(ModelForm):
     class Meta:
-        model = User
-        fields = ['username', 'first_name', 'last_name', 'email', ]
+        model = Profile
+        fields = ('bio', 'birthday')
 
         widgets = {
-            'username': TextInput(attrs={
-                'class': 'form-control'
-            }),
-            'first_name': TextInput(attrs={
-                'class': 'form-control'
-            }),
-            'last_name': TextInput(attrs={
-                'class': 'form-control'
-            }),
-            'email': EmailInput(attrs={
-                'class': 'form-control'
-            })
+            'birthday': DateInput()
         }
+
+class UserForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ('username', 'last_name', 'first_name', 'email')
